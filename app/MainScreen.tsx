@@ -4,19 +4,26 @@ import Card from './card';
 import { Car } from 'lucide-react';
 import QuickAcess from './quickAcess';
 
-interface DashboardProps {
+interface CanvasProps {
   navegarPara: (novaTela: TelaAtual) => void;
 }
 
-export function MainScreen({navegarPara}: DashboardProps ) {
+export function MainScreen({navegarPara}: CanvasProps ) {
   const [activeTab, setActiveTab] = useState<string>('MainScreen');
 
   return (
     <main className="flex-1 px-4 py-8 md:px-[10%]">
     <div className="flex flex-col gap-6 md:grid md:grid-cols-[70%_30%]">
-      
       {/* Coluna 1: Feed de Noticias / Cards */}
       <div className="flex h-auto w-full flex-col gap-4">
+        <Card typeAviso="Aviso Geral" 
+        title = 'Início das aulas.'
+        data="Publicado em 15 de Novembro de 2026"
+        content={
+    <>
+      Olá a todos! Anunciou-se através da plataforma Moodle que as aulas iniciarão no dia 18-11-2026. Primeira aula será de Anncio realizado na plataforma Moodle, primeira aula será "1. Introdução à modalidade EaD e aos recursos tecnológicos de apoio". Seguirei atualizando o a página conforme novas informações forem surgindo.
+    </> 
+         } />
         <Card typeAviso="Aviso Geral" 
         title = 'A data 14/10/2026 estava errada.'
         data="Publicado em 15 de Outubro de 2026"

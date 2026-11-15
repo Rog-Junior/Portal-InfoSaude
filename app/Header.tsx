@@ -2,8 +2,14 @@
 
 import { useState } from 'react';
 import { Layers3, Menu, X } from 'lucide-react';
+import { TelaAtual } from './Canvas';
 
-export default function Header() {
+interface CanvasProps{
+  navegarPara: (novaTela: TelaAtual) => void;
+  }
+
+
+export default function Header({navegarPara}: CanvasProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -38,12 +44,12 @@ export default function Header() {
         <nav className="hidden md:flex">
           <ul className="flex flex-row gap-2">
             <li>
-              <a href="#" className="block rounded-full p-2 px-4 transition duration-200 hover:bg-slate-100/10">
+              <a href="#" onClick={(e) => {e.preventDefault(); navegarPara("MainScreen")}} className="block rounded-full p-2 px-4 transition duration-200 hover:bg-slate-100/10">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" onClick={(e) => {e.preventDefault(); alert("Página Ainda não criada")}} className="block rounded-full p-2 px-4 transition duration-200 hover:bg-slate-100/10">
+              <a href="#" onClick={(e) => {e.preventDefault(); navegarPara("Forum"); alert("Apesar de criado a aba forum, o mesmo ainda está em desenvolvimento e não está devidamente funcionando.")}} className="block rounded-full p-2 px-4 transition duration-200 hover:bg-slate-100/10">
                 Fórum
               </a>
             </li>

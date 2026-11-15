@@ -1,3 +1,6 @@
+import { CronogramaModal } from "./cronograma"
+import { DisciplinasModal } from "./disciplinas"
+
 export default function QuickAcess(){
 
     return(
@@ -29,6 +32,8 @@ export default function QuickAcess(){
       >
         Grupo do WhatsApp dos Alunos
       </a>
+      <CronogramaModal />
+      <DisciplinasModal />
     </div>
   </div>
 </div>
