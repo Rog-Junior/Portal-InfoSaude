@@ -16,6 +16,13 @@ export function MainScreen({navegarPara}: CanvasProps ) {
     <div className="flex flex-col gap-6 md:grid md:grid-cols-[70%_30%]">
       {/* Coluna 1: Feed de Noticias / Cards */}
       <div className="flex h-auto w-full flex-col gap-4">
+        <Card typeAviso="Código - Registro de Aula" 
+        title = 'Live intitulada "Tira duvidas"'
+        data="Publicado em 25 de Novembro de 2026"
+        content={
+    <>
+      A confirmação de presença da aula deve ser realizada até às 23:59 do dia 25 de novembro de 2025 através da plataforma Moodle. O código para o registro da aula é "Literacia".</> 
+         } />
         <Card typeAviso="Aviso Geral" 
         title = 'Início das aulas.'
         data="Publicado em 15 de Novembro de 2026"
