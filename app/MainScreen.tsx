@@ -21,7 +21,7 @@ export function MainScreen({navegarPara}: CanvasProps ) {
         data="Publicado em 25 de Novembro de 2026"
         content={
     <>
-      A confirmação de presença da aula deve ser realizada até às 23:59 do dia 25 de novembro de 2025 através da plataforma Moodle. O código para o registro da aula é "Literacia".</> 
+      A confirmação de presença da aula deve ser realizada até às 23:59 do dia 25 de novembro de 2026 através da plataforma Moodle. O código para o registro da aula é "Literacia".</> 
          } />
         <Card typeAviso="Aviso Geral" 
         title = 'Início das aulas.'
